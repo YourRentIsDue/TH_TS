@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Turbo Blog</title>
+    <link rel="stylesheet" href="navAndFoot.css" />
+    <link rel="stylesheet" href="unsemantic-grid-responsive.css" />
+    <style>
+        #pageTitle{
+            width:100%;
+            background-color: #BDD5EA;
+            left:0px;
+            text-align: center;
+            margin:0px;
+            color:#2B343D;
+        }
+        #pageTitle h4{
+            margin:0px;
+            padding:20px;
+            background-color: #BDD5EA;
+        }
+        .grid-container{
+            padding:0px;
+        }
+        .grid-33{
+            padding:25px;
+        }
+
+        article{
+            margin:auto;
+            padding:15px;
+            outline-style: solid;
+            outline-color: #495867;
+            background-color: #BDD5EA;
+            margin-bottom: 25px;
+        }
+        article img{
+            width:100%;
+            height: auto;
+            margin:auto;
+            outline-style: solid;
+            outline-color: #495867;
+            
+        }
+        article h3{
+            text-align: center;
+            outline-style: solid;
+            outline-color: #495867;
+            background-color: #BDD5EA;
+            margin:0px;
+            margin-top:10px;
+            
+        }
+        article p{
+            background-color: #BDD5EA;
+            outline-style: solid;
+            outline-color: #495867;
+            overflow: hidden;
+            height: 100px;
+            margin-bottom:0px;
+        }
+    </style>
+</head>
+<!-- HEADER -->
+<header>
+    <img src="Photos/turbohedgehogs3.png" alt="TurboLogo" id="logo" />
+    <!--NAVIGATION BAR START-->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="#">Members</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Local Tourism</a></li>
+            <li><a href="GalleryHome.html">Gallery</a></li>
+            <li><a href="#">Memes</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- NAVIGATION BAR END-->
+
+</header>
+<!-- END OF THE HEADER-->
+<!-- START OF MAIN-->
+<main>
+
+    <div id="pageTitle">
+        <h4>Blogs</h4>
+    </div>
+
+    <div class="grid-container">
+
+        <div id="column1" class="grid-33">
+        </div>
+
+        <div id="column2" class="grid-33">
+        </div>
+
+        <div id="column3" class="grid-33">
+        </div>
+
+    </div>
+    <script>
+            var articleImgs = [
+            "Photos/turboSquad.jpeg",
+            "Photos/turbohedgehogs3.png",
+            "Photos/turbohedgehogs3.png",
+            "Photos/turbohedgehogs3.png",
+            "Photos/turbohedgehogs3.png",
+            "Photos/turbohedgehogs3.png"
+            ]
+            var articleTitles = [
+                "Title1",
+                "Title2",
+                "Title3",
+                "Title4",
+                "Title5",
+                "Title6"
+            ]
+            var articleTexts =[
+                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also",
+                "Photos/turbohedgehogs3.png",
+                "Yeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeet",
+                "Photos/turbohedgehogs3.png",
+                "Photos/turbohedgehogs3.png",
+                "Photos/turbohedgehogs3.png"
+            ]
+
+            let count = 0
+            for(let x= 0; x <3; x++){ 
+                for(let y = 0; y<2;y++){
+                    var article = document.createElement("article");
+
+                    let articleImg = document.createElement("img");
+                    articleImg.setAttribute("src", articleImgs[count]);
+
+                    let articleTitle = document.createElement("h3");
+                    articleTitle.appendChild(document.createTextNode(articleTitles[count]));
+
+                    let articleText =  document.createElement("p");
+                    articleText.appendChild(document.createTextNode(articleTexts[count]));
+
+                    article.appendChild(articleImg);
+                    article.appendChild(articleTitle);
+                    article.appendChild(articleText);
+
+                    let column = document.getElementById("column"+(x+1))
+                    column.appendChild(article)
+                    count++
+                };
+
+            };
+            var para = document.createElement("p");
+            var node = document.createTextNode("This is new.");
+            para.appendChild(node);
+            var element = document.getElementById("div1");
+            element.appendChild(para);
+            </script>
+</main>
+<!--END OF MAIN-->
+<!-- FOOTER STARTS-->
+<footer>
+    <p> (c)TurboHedgehogs 2019</p>
+</footer>
+<!-- FOOTER ENDS-->
