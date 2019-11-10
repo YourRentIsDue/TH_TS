@@ -36,6 +36,10 @@
             background-color: #BDD5EA;
             margin-bottom: 25px;
         }
+        article a{
+            color:#2B343D;
+            text-decoration: none;
+        }
         article img{
             width:100%;
             height: auto;
@@ -112,7 +116,15 @@
             "Photos/turbohedgehogs3.png",
             "Photos/turbohedgehogs3.png",
             "Photos/turbohedgehogs3.png"
-            ]
+            ];
+            var articleLinks = [
+                "#",
+                "#",
+                "#",
+                "#",
+                "#",
+                "#"
+            ];
             var articleTitles = [
                 "Title1",
                 "Title2",
@@ -120,7 +132,7 @@
                 "Title4",
                 "Title5",
                 "Title6"
-            ]
+            ];
             var articleTexts =[
                 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also",
                 "Photos/turbohedgehogs3.png",
@@ -128,14 +140,18 @@
                 "Photos/turbohedgehogs3.png",
                 "Photos/turbohedgehogs3.png",
                 "Photos/turbohedgehogs3.png"
-            ]
+            ];
 
-            let count = 0
+            let count = 0;
             for(let x= 0; x <3; x++){ 
                 for(let y = 0; y<2;y++){
                     var article = document.createElement("article");
 
+                    let link = document.createElement("a"); //hyaa!
+                    link.setAttribute("href", articleLinks[count]);
+
                     let articleImg = document.createElement("img");
+                    articleImg.setAttribute("src", articleImgs[count]);
                     articleImg.setAttribute("src", articleImgs[count]);
 
                     let articleTitle = document.createElement("h3");
@@ -144,9 +160,10 @@
                     let articleText =  document.createElement("p");
                     articleText.appendChild(document.createTextNode(articleTexts[count]));
 
-                    article.appendChild(articleImg);
-                    article.appendChild(articleTitle);
-                    article.appendChild(articleText);
+                    link.appendChild(articleImg);
+                    link.appendChild(articleTitle);
+                    link.appendChild(articleText);
+                    article.appendChild(link);
 
                     let column = document.getElementById("column"+(x+1))
                     column.appendChild(article)
@@ -154,11 +171,7 @@
                 };
 
             };
-            var para = document.createElement("p");
-            var node = document.createTextNode("This is new.");
-            para.appendChild(node);
-            var element = document.getElementById("div1");
-            element.appendChild(para);
+
             </script>
 </main>
 <!--END OF MAIN-->
