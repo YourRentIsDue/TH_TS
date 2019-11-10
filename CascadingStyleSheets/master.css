@@ -1,0 +1,115 @@
+﻿#map {
+
+    position: fixed; 
+    height: 76.5%; 
+    top:0;
+    }
+
+html, body {
+
+    height: 100%;
+    margin: 0;
+    padding: 0;     
+}
+
+
+main {
+    border: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#content{
+    text-align: center;
+    border:hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #BDD5EA;
+}
+
+#beach {
+    max-width: 320px;
+    padding-top: 20px;
+}
+
+#krakow {
+    max-width: 320px;
+    padding-top: 20px;
+}
+
+#chopok {
+    max-width: 320px;
+    padding-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    display: inline-block;
+    border: hidden;
+    background-color: #BDD5EA;
+    color: #000000;
+    text-decoration: none;
+    padding: 15px 25px;
+    max-width: 73%;
+}
+
+.Krak{
+    min-width:73%;
+}
+
+h2:hover, h2:active {
+    background-color: #FE5F55;
+}
+
+/*HEADER*/
+header {
+    background-color: #BDD5EA;
+    padding-top:5px;
+    margin-top:0;
+}
+
+li a:hover {
+    background-color: #FE5F55;
+}
+
+#articleContent {
+    text-align:center;
+    border:hidden;
+    background-color: #BDD5EA;
+    margin-left: 10%;
+    margin-right:10%;
+    margin-bottom:10%;
+}
+
+#articleContent p{
+    padding:20px;
+    padding-bottom:30px;
+}
+
+#squad{
+    position: relative;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+    
+}
+
+.join1{
+    text-align:center;
+}
+
+.join{
+    display:inline-block;
+    border:hidden;
+    background-color:#FE5F55;
+    color:#ffffff;
+    text-decoration:none;
+    padding:15px 25px;
+    vertical-align: middle;
+}
+
+.join:hover, .join:active{
+    background-color:red;
+}
+
+

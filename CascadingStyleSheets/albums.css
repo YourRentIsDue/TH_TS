@@ -1,0 +1,40 @@
+﻿main {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 6%;
+    margin-top: 2%;
+}
+
+section {
+
+    text-align: center;
+}
+
+/*SIZE AND PLACEMENT OF PHOTOS*/
+
+#album {
+    width: 500px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+    /* HYPERLINK EDIT STARTS*/
+h3 {
+    margin-left: 9%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link:visited {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.link:visited {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}

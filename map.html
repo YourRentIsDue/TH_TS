@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="CascadingStyleSheets/master.css" type="text/css"> <!--calling the css file-->
+    <link rel="stylesheet" href="CascadingStyleSheets/navAndFoot.css" type="text/css">
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Map of travels</title>
+
+</head>
+
+<body>
+
+
+    <header>
+        <img src="Photos/turbohedgehogs3.png" alt="TurboLogo" id="logo" />
+        <!--NAVIGATION BAR START-->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="#">Members</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Local Tourism</a></li>
+                <li><a href="GalleryHome.html">Gallery</a></li>
+                <li><a href="#">Memes</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- NAVIGATION BAR END-->
+
+
+    
+</header>
+
+
+<div id="map">
+        <!-- initializing map-->
+
+        <script>
+    //starting javascript
+            function initMap() { //creating a function, which makes the map and centers it at 0;0 Latitude;Longitude
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 3, //setting zoom
+                    center: new google.maps.LatLng(0, 0), //setting lat and lng
+                });
+
+                var aberdeen = new google.maps.LatLng(57.149651, -2.099075); //creating a variable with the lat and lng of aberdeen
+                var orkney = new google.maps.LatLng(58.9809, 2.9605);
+
+                var aberdeenMarker = new google.maps.Marker({ position: aberdeen, map: map }); //creating a marker
+                var orkneyMarker = new google.maps.Marker({ position: orkney, map: map }); //creating a marker
+
+                var contentString = '<a href="travelLog.html"><img src= Photos/lobster.png></a>'; //creating the content which desplays during the marker click event
+
+                var infowindow = new google.maps.InfoWindow({  //creating a fucntion that opens the content once the marker has been clicked
+                    content: contentString
+                });
+
+                aberdeenMarker.addListener('click', function () { //creating a listener for a marker click
+
+                    infowindow.open(map, aberdeenMarker);  //calling function "info window";
+                });
+            }
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2r_yRDD9iIKGZC1TBilMQb4DC5h4NAJM&callback=initMap">
+ //map credentials (will give an error if this line is deleted, blame google, not me)
+        </script> <!-- end script-->
+    </div>
+
+
+    <footer>
+            <p> (c)TurboHedgehogs 2019</p>
+        </footer>
+
+
+</body>
+</html>
