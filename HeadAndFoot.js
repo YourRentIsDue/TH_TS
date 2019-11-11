@@ -2,14 +2,39 @@
 //Header
 let header = document.createElement("header");
 
-let logoLink=document.createElement("a");
-logoLink.setAttribute("href", "https://www.youtube.com/watch?v=hOpixNhyKMM");
-header.appendChild(logoLink);
+var playButton=document.createElement("audio");
+playButton.setAttribute("id", "audio_play")
+var audioSource=document.createElement("source");
+audioSource.setAttribute ("src", "dejaVu.mp3")
+audioSource.setAttribute ("type", "audio/mpeg");
+playButton.appendChild(audioSource);
+header.appendChild(playButton);
+
 let logo = document.createElement("img");
 logo.setAttribute("src", "Photos/turbohedgehogs3.png");
+logo.setAttribute("onClick", "togglePlay()");
 logo.setAttribute("alt", "TurboLogo");
 logo.setAttribute("id", "logo");
-logoLink.appendChild(logo);
+header.appendChild(logo);
+
+var isPlaying = false;
+
+function togglePlay (){
+    if (isPlaying){
+        document.getElementById('audio_play').pause();
+        isPlaying=false;
+        
+    }
+    else {
+        document.getElementById('audio_play').play();
+        isPlaying=true;
+    }
+};
+
+
+
+
+
 //Nav Bar
 let navBar = document.createElement("nav");
 
