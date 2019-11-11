@@ -2,6 +2,7 @@
 //Header
 let header = document.createElement("header");
 
+//creating <audio> tag
 var playButton=document.createElement("audio");
 playButton.setAttribute("id", "audio_play")
 var audioSource=document.createElement("source");
@@ -10,31 +11,76 @@ audioSource.setAttribute ("type", "audio/mpeg");
 playButton.appendChild(audioSource);
 header.appendChild(playButton);
 
+
+//creating logo
 let logo = document.createElement("img");
 logo.setAttribute("src", "Photos/turbohedgehogs3.png");
-logo.setAttribute("onClick", "togglePlay()");
 logo.setAttribute("alt", "TurboLogo");
 logo.setAttribute("id", "logo");
 header.appendChild(logo);
+//creating onclick even to animate the logo and play song
+logo.setAttribute("onClick", "togglePlay(), animation();");
 
+//variable to keep track of whether it is playing or not
 var isPlaying = false;
 
+
+//function that either plays or pauses song depending on isPlaying
 function togglePlay (){
     if (isPlaying){
-        document.getElementById('audio_play').pause();
-        isPlaying=false;
+        document.getElementById('audio_play').pause(); //pauses song
+        isPlaying=false; //sets playing to false
         
     }
     else {
-        document.getElementById('audio_play').play();
-        isPlaying=true;
+        document.getElementById('audio_play').play(); //plays song
+        isPlaying=true; // sets playing to true
     }
 };
 
 
+//function that animates the logo
+function animation (){
+    var elem = document.getElementById('logo'); //gets the logo element
+    var position =0; //creates a variable to keep track of where the logo is
+    var id = setInterval (frame, 10); //plays a frame every ten ms (100fps Can set to less for better performance)
+    var loop=false; //variable that keeps track of whether or not the logo has already traveled all the way to the right
 
 
+    function frame (){
 
+        if (position >52){ //if logo is offscreen to the right, put it offscreen to the left
+            position=-50;
+            elem.style.left= position + '%';
+            loop= true;
+            
+        }
+
+        else if (!loop) { // if logo is still not at the right edge of the screen move it to the right
+            position+=1;
+            elem.style.left= position +'%';
+            console.log (elem.style.left);
+            console.log (position);
+        }
+
+        else if (loop){ //if it already reached the right edge of the screen check whether it's in the middle yet, if not move it to the right until it is
+            if (position===0) { 
+                clearInterval(id);
+            }
+            else {   
+            position+=1;
+            console.log (elem.style.left);
+            console.log (position);
+            elem.style.left= position + '%';
+            }
+        }
+    }
+
+            
+            
+}
+
+    
 //Nav Bar
 let navBar = document.createElement("nav");
 
