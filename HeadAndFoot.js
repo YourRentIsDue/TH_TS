@@ -2,11 +2,14 @@
 //Header
 let header = document.createElement("header");
 
+let logoLink=document.createElement("a");
+logoLink.setAttribute("href", "https://www.youtube.com/watch?v=hOpixNhyKMM");
+header.appendChild(logoLink);
 let logo = document.createElement("img");
 logo.setAttribute("src", "Photos/turbohedgehogs3.png");
 logo.setAttribute("alt", "TurboLogo");
 logo.setAttribute("id", "logo");
-header.appendChild(logo);
+logoLink.appendChild(logo);
 //Nav Bar
 let navBar = document.createElement("nav");
 
