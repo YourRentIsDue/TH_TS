@@ -4,6 +4,8 @@
     margin-right:auto;
     background-color: #577399;
     margin:0;
+    overflow-x: hidden;
+
 }
 
 /*HEADER*/
@@ -47,10 +49,12 @@ li a:hover {
 }
 /* FIXED SIZE OF THE LOGO*/
 #logo {
+    position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 200px;
+
     
 }
 
