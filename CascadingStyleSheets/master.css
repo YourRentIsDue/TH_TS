@@ -113,3 +113,12 @@ li a:hover {
 }
 
 
+#wholeGrid{
+    margin-top: 20px;
+}
+
+#imageGrid {
+    display:inline-block;
+}
+
+
