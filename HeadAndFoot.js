@@ -2,7 +2,7 @@
 //Header
 let header = document.createElement("header");
 
-let logo = document.createElement("img")
+let logo = document.createElement("img");
 logo.setAttribute("src", "Photos/turbohedgehogs3.png");
 logo.setAttribute("alt", "TurboLogo");
 logo.setAttribute("id", "logo");
@@ -20,21 +20,21 @@ let arrayOfLocations = [ //First element name, second element href
     ["Gallery","GalleryHome.html"],
     ["Memes","#"],
     ["Contact","#"]
-]
+];
 
-let navItems = document.createElement("ul")
+let navItems = document.createElement("ul");
 
 for(let count = 0; count<arrayOfLocations.length;count++){
 
     let listElement = document.createElement("li");
     let listLink = document.createElement("a");
-    let listText = document.createTextNode(arrayOfLocations[count][0])
+    let listText = document.createTextNode(arrayOfLocations[count][0]);
     listLink.setAttribute("href", arrayOfLocations[count][1]);
     listLink.appendChild(listText);
     
     listElement.appendChild(listLink);
     navItems.appendChild(listElement);
-}
+};
 navBar.appendChild(navItems);
 header.appendChild(navBar);
 
