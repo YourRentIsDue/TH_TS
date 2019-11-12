@@ -59,8 +59,6 @@ function animation (){
         else if (!loop) { // if logo is still not at the right edge of the screen move it to the right
             position+=1;
             elem.style.left= position +'%';
-            console.log (elem.style.left);
-            console.log (position);
         }
 
         else if (loop){ //if it already reached the right edge of the screen check whether it's in the middle yet, if not move it to the right until it is
@@ -69,8 +67,6 @@ function animation (){
             }
             else {   
             position+=1;
-            console.log (elem.style.left);
-            console.log (position);
             elem.style.left= position + '%';
             }
         }
