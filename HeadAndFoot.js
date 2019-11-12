@@ -86,7 +86,7 @@ let arrayOfLocations = [ //First element name, second element href
     ["Map","map.html"],
     ["Blog", "blog.html"],
     ["Events","#"],
-    ["Local Tourism","#"],
+    ["Local Tourism","localTourism.html"],
     ["Gallery","GalleryHome.html"],
     ["Memes","memes.html"],
     ["Contact","#"]
