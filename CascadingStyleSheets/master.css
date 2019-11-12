@@ -122,4 +122,15 @@ li a:hover {
     display:inline-block;
 }
 
+#imageGrid img {
+    max-width:500px;
+}
+
+#mapImage{
+
+max-width: 500px;
+
+
+}
+
 
