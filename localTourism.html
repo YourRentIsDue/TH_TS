@@ -26,14 +26,15 @@
                 article{
                     margin:auto;
                     padding:15px;
+                    max-width: 85%;
                     outline-style: solid;
                     outline-color: #495867;
                     background-color: #BDD5EA;
                     margin-bottom: 25px;
                 }
                 article img{
-                    height:184px;
-                    width:35%;
+                    height:234px;
+                    max-width:35%;
                     margin:auto;
                     margin-right: 15px;
                     object-fit: cover;
@@ -41,6 +42,10 @@
                     outline-color: #495867;
                     float:left;
             
+                }
+                article a{
+                    color:#2B343D;
+                    text-decoration: none;
                 }
                 article h3{
                     float:left;
@@ -52,7 +57,7 @@
                     outline-style: solid;
                     outline-color: #495867;
                     overflow: hidden;
-                    height: 150px;
+                    height: 200px;
                     margin-bottom:0px;
                     padding-left:2px;
                 }
@@ -73,13 +78,57 @@
             <h2>Local Tourism</h2>
         </div>  
         <div id="articles">
-        <article>
-            <img src="Photos/turboSquad.jpeg"></img>
-            <h3>TITLE</h3>
-            <br>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        </article>
+
         </div>
+
+        <script>
+            
+            
+            function Article(articleImg,articleLink,articleTitle,articleText){
+                this.img = articleImg;
+                this.link = articleLink;
+                this.title = articleTitle;
+                this.text = articleText;
+                this.createHTML = createHTML;
+
+                function createHTML(){
+                    var article = document.createElement("article");
+
+                    let link = document.createElement("a"); 
+                    link.setAttribute("href", this.link);
+
+                    let articleImg = document.createElement("img");
+                    articleImg.setAttribute("src", this.img);
+
+                    let articleTitle = document.createElement("h3");
+                    articleTitle.appendChild(document.createTextNode(this.title));
+
+                    let articleText =  document.createElement("p");
+                    articleText.appendChild(document.createTextNode(this.text));
+                    let br = document.createElement("br");
+
+                    link.appendChild(articleImg);
+                    link.appendChild(articleTitle);
+                    link.appendChild(br)
+                    link.appendChild(articleText);
+                    article.appendChild(link);
+                    return(article);
+                }
+            }
+
+            console.log("hewwo")    
+            a1 = new Article("Photos/turboSquad.jpeg","#","Title","Erika hutchison wrote this shockingly enough");
+            a2 = new Article("Photos/lobster.png","#","Title","Erika hutchison wrote this shockingly enough");
+            a3 = new Article("Photos/ChopokTH.jpg","#","Title","Erika hutchison wrote this shockingly enough");
+            a4 = new Article("Photos/turboSquad.jpeg","#","Title","Erika hutchison wrote this shockingly enough");
+            a5 = new Article("Photos/turboSquad.jpeg","#","Title","Erika hutchison wrote this shockingly enough");
+            articleArray = [a1,a2,a3,a4,a5];
+            
+            var articleDiv = document.getElementById("articles");
+            for(let count = 0 ; count < articleArray.length ; count ++){
+                articleDiv.appendChild(articleArray[count].createHTML());
+            }
+            </script>
         <!-- End of Main -->
     </body>
     
