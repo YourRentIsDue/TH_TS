@@ -59,6 +59,8 @@ function animation (){
         else if (!loop) { // if logo is still not at the right edge of the screen move it to the right
             position+=1;
             elem.style.left= position +'%';
+            console.log (elem.style.left);
+            console.log (position);
         }
 
         else if (loop){ //if it already reached the right edge of the screen check whether it's in the middle yet, if not move it to the right until it is
@@ -67,6 +69,8 @@ function animation (){
             }
             else {   
             position+=1;
+            console.log (elem.style.left);
+            console.log (position);
             elem.style.left= position + '%';
             }
         }
@@ -86,10 +90,12 @@ let arrayOfLocations = [ //First element name, second element href
     ["Map","map.html"],
     ["Blog", "blog.html"],
     ["Events","#"],
-    ["Local Tourism","localTourism.html"],
+    ["Local Tourism","#"],
     ["Gallery","GalleryHome.html"],
     ["Memes","memes.html"],
-    ["Contact","#"]
+    ["Contact","#"],
+    ["Support","SupportUs.html"],
+    ["Members", "Members.html"]
 ];
 
 let navItems = document.createElement("ul");
