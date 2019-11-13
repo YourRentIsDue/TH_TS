@@ -1,0 +1,36 @@
+﻿main {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 6%;
+    margin-top: 2%;
+}
+
+section {
+
+    text-align: center;
+}
+
+/*SIZE AND PLACEMENT OF PHOTOS*/
+
+#album {
+    width: 500px;
+}
+
+    /* HYPERLINK EDIT STARTS*/
+h3 {
+    margin-left: 9%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.link:visited {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.link:visited {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
