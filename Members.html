@@ -9,43 +9,10 @@
     <link rel="stylesheet" type = "text/css" href="CascadingStyleSheets/master.css" />
     <link rel="stylesheet" href="CascadingStyleSheets/unsemantic-grid-responsive.css" />
     <link rel="shorcut icon" type = "image/png" href="Photos/turbohedgehogs3.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
-        #scooby{
-            width: 200px;
-            height: 200px;
-            padding-top: 20px;
-            border-radius: 50%;
-        }
-        #fred{
-            width: 200px;
-            height: 200px;
-            padding-top: 20px;
-            border-radius: 50%;
-        }
-        #daphne{
-            width: 200px;
-            height: 200px;
-            padding-top: 20px;
-            border-radius: 50%;
-        }
-        #shaggy{
-            width: 200px;
-            height: 200px;
-            padding-top: 20px;
-            border-radius: 50%;
-        }
-        #velma{
-            width: 200px;
-            height: 200px;
-            padding-top: 20px;
-            border-radius: 50%;
-        }
-        #scrappy{
-            width: 200px;
-            height: 200px;
-            padding-top: 20px;
-            border-radius: 50%;
-        }
+      
         h4 h3{
             text-align: center;
             display: inline-block;
@@ -56,7 +23,87 @@
             padding: 15px 25px;
             max-width: 50%;
         }
-}
+        
+        h3:after{
+            content: '';
+            background: #577399;
+            display: block;
+            height: 3px;
+            width: 250px;
+            margin: 10px auto;
+            
+        }
+    
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            min-width: 250px;
+            height: 250px;
+            margin: 20%;
+            border-radius: 50%;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: #BDD5EA;
+            font-size: 16px;
+            padding: 10px;
+            margin-left: 150px;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        ul {
+            position: relative;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+            ul > li {
+                position: relative;
+                display: inline;    
+            }
+
+                ul > li a {
+                        display: inline-block;
+                        text-align: center;
+                        padding: 10px 30px;
+                        text-decoration: none;
+                    }
+
     </style>
 </head>
 
@@ -72,24 +119,48 @@
 
 <!--MAIN STARTS-->
 <main class="grid-container">
+        
     <div id="content">
         <section>
             <h3><br>Meet our current members<br></h3>
         </section>
+        
 
         <!--SECTION 1 STARTS-->
         <section class="grid-33">
-            <img src="Members/Scooby.jpg" alt="Michael" id="scooby"/>
-            <h4>Michael<br>
-                PRESIDENT
-            </h4>
+                <div class="container">
+                        <img src="Members/Scooby.jpg" alt="Michael" class="image" style="width:100%">
+                        <div class="middle">
+                          <div class="text">
+                              <ul>
+                              <li><a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                          </div>
+                        </div>
+                      </div>
+                <h4>Michael<br>
+                    PRESIDENT
+                </h4>
+            
             
         </section>
         <!-- SECTION 1 ENDS -->
 
         <!-- SECTION 2 STARTS-->
         <section class="grid-33">
-            <img src="Members/fred.jpg" alt="Josh" id="fred"/>
+                <div class="container">
+                        <img src="Members/Fred.jpg" alt="Josh" class="image" style="width:100%">
+                        <div class="middle">
+                                <div class="text">
+                                        <ul>
+                                        <li><a href="#" class="fa fa-facebook"></a>
+                                          <a href="#" class="fa fa-twitter"></a>
+                                          <a href="#" class="fa fa-instagram"></a>
+                                    </div>
+                        </div>
+                      </div>
+            
             <h4>Josh<br>
                 VICE PRESIDENT
             </h4>
@@ -98,7 +169,18 @@
 
         <!-- SECTION 3 STARTS-->
         <section class="grid-33">
-            <img src="Members/Daphne.jpg" alt="Klaudia" id="daphne"/>
+                <div class="container">
+                        <img src="Members/Daphne.jpg" alt="Klaudia" class="image" style="width:100%">
+                        <div class="middle">
+                                <div class="text">
+                                        <ul>
+                                        <li><a href="#" class="fa fa-facebook"></a>
+                                          <a href="#" class="fa fa-twitter"></a>
+                                          <a href="#" class="fa fa-instagram"></a>
+                                    </div>
+                        </div>
+                      </div>
+            
             <h4>Klaudia<br>
                 GENERAL MANAGER
             </h4>
@@ -107,16 +189,37 @@
 
         <!--SECTION 4 STARTS-->
         <section class="grid-33">
-            <img src="Members/Shaggy.jpeg" alt="Simon" id="shaggy"/>
+                <div class="container">
+                        <img src="Members/Shaggy.jpeg" alt="Simon" class="image" style="width:100%">
+                        <div class="middle">
+                                <div class="text">
+                                        <ul>
+                                        <li><a href="#" class="fa fa-facebook"></a>
+                                          <a href="#" class="fa fa-twitter"></a>
+                                          <a href="#" class="fa fa-instagram"></a>
+                                    </div>
+                        </div>
+                      </div>
             <h4>Simon<br>
-                TRAVELLER
+                MEME LORD
             </h4>
         </section>
         <!-- SECTION 4 ENDS -->
 
         <!-- SECTION 5 STARTS-->
         <section class="grid-33">
-            <img src="Members/Velma.jpg" alt="Erika" id="velma"/>
+                <div class="container">
+                        <img src="Members/Velma.jpg" alt="Erika" class="image" style="width:100%">
+                        <div class="middle">
+                                <div class="text">
+                                        <ul>
+                                        <li><a href="#" class="fa fa-facebook"></a>
+                                          <a href="#" class="fa fa-twitter"></a>
+                                          <a href="#" class="fa fa-instagram"></a>
+                                    </div>
+                        </div>
+                      </div>
+            
             <h4>Erika<br>
                 COORD OF FINANCES<br>
             </h4>
@@ -125,17 +228,30 @@
 
         <!-- SECTION 6 STARTS-->
         <section class="grid-33">
-            <img src="Members/Scrappy.png" alt="Weronika" id="scrappy"/>
+                <div class="container">
+                        <img src="Members/Scrappy.png" alt="Weronika" class="image" style="width:100%">
+                        <div class="middle">
+                                <div class="text">
+                                        <ul>
+                                        <li><a href="#" class="fa fa-facebook"></a>
+                                          <a href="#" class="fa fa-twitter"></a>
+                                          <a href="#" class="fa fa-instagram"></a>
+                                    </div>
+                        </div>
+                      </div>
             <h4>Weronika<br>
-                TRAVELLER
+                TRAVEL LEADER
             </h4>
         </section>
         <!-- SECTION 6 ENDS-->
+        
         
         <a href="#">
             <p class="join"><b>Become a TurboHedgehog</b></p>
         </a>
     </div>
+    
+    
 
 
 </main>
