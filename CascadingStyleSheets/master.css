@@ -9,7 +9,7 @@ html, body {
 
     height: 100%;
     margin: 0;
-    padding: 0;     
+    padding: 0;    
 }
 
 
@@ -17,6 +17,7 @@ main {
     border: hidden;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 5%;
 }
 
 #content{
@@ -25,20 +26,26 @@ main {
     margin-left: 10%;
     margin-right: 10%;
     background-color: #BDD5EA;
+
 }
 
 #beach {
-    max-width: 320px;
+    max-width: 380px;
     padding-top: 20px;
 }
 
 #krakow {
-    max-width: 320px;
+    max-width: 380px;
     padding-top: 20px;
 }
 
 #chopok {
-    max-width: 320px;
+    max-width: 380px;
+    padding-top: 20px;
+}
+
+#orkney {
+    max-width: 380px;
     padding-top: 20px;
 }
 
@@ -50,7 +57,7 @@ h2 {
     color: #000000;
     text-decoration: none;
     padding: 15px 25px;
-    max-width: 73%;
+    width: 330px;
 }
 
 .Krak{
@@ -61,7 +68,6 @@ h2:hover, h2:active {
     background-color: #FE5F55;
 }
 
-/*HEADER*/
 header {
     background-color: #BDD5EA;
     padding-top:5px;
@@ -87,6 +93,7 @@ li a:hover {
 }
 
 #squad{
+    margin-top:2%;
     position: relative;
     display:block;
     margin-left:auto;
@@ -104,7 +111,7 @@ li a:hover {
     background-color:#FE5F55;
     color:#ffffff;
     text-decoration:none;
-    padding:15px 25px;
+    padding:15px 15px;
     vertical-align: middle;
 }
 
@@ -115,7 +122,8 @@ li a:hover {
 
 #wholeGrid{
     margin-top: 20px;
-    margin-bottom:50px;
+    margin-bottom:5%;
+    margin-left: 17%;
 }
 
 #imageGrid {

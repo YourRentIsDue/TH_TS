@@ -13,7 +13,7 @@ section {
 /*SIZE AND PLACEMENT OF PHOTOS*/
 
 #album {
-    width: 500px;
+    width: 43%;
 }
 
     /* HYPERLINK EDIT STARTS*/
@@ -21,6 +21,7 @@ h3 {
     margin-left: 9%;
     color: #ffffff;
     text-decoration: none;
+    font-size: 15px;
 }
 
 .link:visited {
