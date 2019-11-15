@@ -1,15 +1,117 @@
 ﻿<!DOCTYPE html>
+<style>
+    .lightbox {
+        float: left;
+        width: 25%;
+    }
 
+    /*MODAL*/
+    .modalClass {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 10px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: black;
+    }
+
+    /*MODAL CONTENT*/
+    .modalContent {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        height: 90%;
+        width: 65%;
+    }
+
+    /*CLOSE BUTTON*/
+    .closeCursor {
+        color: white;
+        position: absolute;
+        top: 10px;
+        height: 25px;
+        font-size: 35px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+        .closeCursor:hover, .closeCursor:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    .slidesOn {
+        display: none;
+    }
+
+    /*NEXT AND PREVIOUS BUTTONS*/
+    .previous,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .numbers {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .previous:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    img.lightbox {
+        opacity: 0.6;
+    }
+
+    .active, .lightbox:hover {
+        opacity: 1;
+    }
+
+    img.shadow {
+        transition: 0.3s;
+    }
+
+    .shadow:hover {
+        box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+</style>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Aberdeen Coast</title>
+    <title>Orkney</title>
     <link rel="stylesheet" href="CascadingStyleSheets/navAndFoot.css" />
-    <link rel="stylesheet" href="CascadingStyleSheets/unsemantic-grid-responsive.css" />
     <link rel="stylesheet" href="CascadingStyleSheets/albums.css" />
-    <link rel="shorcut icon" type = "image/png" href="Photos/turbohedgehogs3.ico" />
-</head>
+    <link rel="stylesheet" href="CascadingStyleSheets/unsemantic-grid-responsive.css" />
+    <link rel="shorcut icon" type="image/png" href="Photos/turbohedgehogs3.ico" />
 
+</head>
 <!-- HEADER -->
 <header>
     <script src="HeadAndFoot.js">
@@ -17,33 +119,156 @@
     <noscript>
         Please enable Javascript
     </noscript>
+    <!-- NAVIGATION BAR END-->
 </header>
 <!-- END OF THE HEADER-->
 <!-- START OF MAIN-->
 <main>
-    <h3><a href="GalleryHome.html" class="link"> Gallery </a> ◀ Aberdeen Coast September 2019</h3>
-    <!--FRIST ROW OF PHOTOS-->
+    <h3><a href="GalleryHome.html" class="link"> Gallery </a> < Orkney June 2019</h3>
+    <!-- FIRST ROW OF PHOTOS-->
     <section>
-        <img src="Photos/Aberdeen/AB1.jpg" alt="Coast1" id="album" />
-        <img src="Photos/Aberdeen/AB2.jpg" alt="Coast2" id="album"/>
+        <img src="Photos/Aberdeen/AB1.jpg" alt="Coast1" id="album" onclick="openModal(); currentSlide(1)" class="shadow" />
+        <img src="Photos/Aberdeen/AB2.jpg" alt="Coast2" id="album" onclick="openModal(); currentSlide(2)" class="shadow" />
     </section>
     <!-- SECOND ROW OF PHOTOS-->
     <section>
-        <img src="Photos/Aberdeen/AB3.jpg" alt="Coast3" id="album"/>
-        <img src="Photos/Aberdeen/AB4.jpg" alt="Coast4" id="album"/>
+        <img src="Photos/Aberdeen/AB3.jpg" alt="Coast3" id="album" onclick="openModal(); currentSlide(3)" class="shadow" />
+        <img src="Photos/Aberdeen/AB4.jpg" alt="Coast4" id="album" onclick="openModal(); currentSlide(4)" class="shadow" />
     </section>
-    <!--THRID ROW PHOTOS-->
+    <!-- THIRD ROW OF PHOTOS-->
     <section>
-        <img src="Photos/Aberdeen/AB5.jpg" alt="Coast5" id="album"/>
-        <img src="Photos/Aberdeen/AB6.jpg" alt="Coast6" id="album"/>
+        <img src="Photos/Aberdeen/AB5.jpg" alt="Coast5" id="album" onclick="openModal(); currentSlide(5)" class="shadow" />
+        <img src="Photos/Aberdeen/AB6.jpg" alt="Coast6" id="album" onclick="openModal(); currentSlide(6)" class="shadow"/>
     </section>
     <!-- FORTH ROW OF PHOTOS-->
     <section>
-        <img src="Photos/Aberdeen/AberdeenBeachTH.jpg" alt="Coast7" id="album"/>
+        <img src="Photos/Aberdeen/AberdeenBeachTH.jpg" alt="Coast7" id="album" onclick="openModal(); currentSlide(7)" class="shadow"/>
     </section>
+
+    <!-- MODAL STARTS -->
+    <div id="modalId" class="modalClass">
+        <span class="closeCursor" onclick="closeModal()">&times;</span>
+        <div class="modalContent">
+
+            <div class="slidesOn">
+                <div class="numbers"> 1 / 7 </div>
+                <img src="Photos/Aberdeen/AB1.jpg" style="width:100%" />
+            </div>
+
+            <div class="slidesOn">
+                <div class="numbers"> 2 / 7 </div>
+                <img src="Photos/Aberdeen/AB2.jpg" style="width:100%" />
+            </div>
+
+            <div class="slidesOn">
+                <div class="numbers"> 3 / 7 </div>
+                <img src="Photos/Aberdeen/AB3.jpg" style="width:100%" />
+            </div>
+
+            <div class="slidesOn">
+                <div class="numbers"> 4 / 7 </div>
+                <img src="Photos/Aberdeen/AB4.jpg" style="width:100%" />
+            </div>
+
+            <div class="slidesOn">
+                <div class="numbers"> 5 / 7 </div>
+                <img src="Photos/Aberdeen/AB5.jpg" style="width:100%" />
+            </div>
+
+            <div class="slidesOn">
+                <div class="numbers"> 6 / 7 </div>
+                <img src="Photos/Aberdeen/AB6.jpg" style="width:100%" />
+            </div>
+
+            <div class="slidesOn">
+                <div class="numbers"> 7 / 7 </div>
+                <img src="Photos/Aberdeen/AberdeenBeachTH.jpg" style="width:100%" />
+            </div>
+
+            <!-- NEXT/PREVIOUS -->
+            <a class="next" onclick="slideNumber(1)"> &#10095 </a>
+            <a class="previous" onclick="slideNumber(-1)"> &#10094 </a>
+
+            <!--THUMBNAIL IMAGES -->
+
+            <div class="row">
+                <img class="lightbox" src="Photos/Aberdeen/AB1.jpg" onclick="currentSlide(1)" />
+            </div>
+
+            <div class="row">
+                <img class="lightbox" src="Photos/Aberdeen/AB2.jpg" onclick="currentSlide(2)" />
+            </div>
+
+            <div class="row">
+                <img class="lightbox" src="Photos/Aberdeen/AB3.jpg" onclick="currentSlide(3)" />
+            </div>
+
+            <div class="row">
+                <img class="lightbox" src="Photos/Aberdeen/AB4.jpg" onclick="currentSlide(4)" />
+            </div>
+
+            <div class="row">
+                <img class="lightbox" src="Photos/Aberdeen/AB5.jpg" onclick="currentSlide(5)" />
+            </div>
+
+            <div class="row">
+                <img class="lightbox" src="Photos/Aberdeen/AB6.jpg" onclick="currentSlide(6)" />
+            </div>
+
+            <div class="row">
+                <img class="lightbox" src="Photos/Aberdeen/AberdeenBeachTH.jpg" onclick="currentSlide(7)" />
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        //OPEN MODAL
+        function openModal() {
+            document.getElementById("modalId").style.display = "block";
+        }
+
+        //CLOSE MODAL
+        function closeModal() {
+            document.getElementById("modalId").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        //PREVIOUS/NEXT CONTROLS
+        function slideNumber(n) {
+            showSlides(slideIndex += n);
+        }
+
+        //THUMBNAIL IMAGE CONTROLS
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var a;
+            var slides = document.getElementsByClassName("slidesOn");
+            var dots = document.getElementsByClassName("row");
+
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slidesOn.length }
+
+            for (a = 0; a < slides.length; a++) {
+                slides[a].style.display = "none";
+            }
+
+            for (a = 0; a < dots.length; a++) {
+                dots[a].className = dots[a].className.replace("active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += "active";
+
+        }
+    </script>
 </main>
 <!--END OF MAIN-->
-
 <!-- FOOTER STARTS-->
 <footer>
     <p> (c)TurboHedgehogs 2019</p>
@@ -51,3 +276,16 @@
 <!-- FOOTER ENDS-->
 
 </html>
+
+
+    <img  id="album" />
+</section>
+<!-- SECOND ROW OF PHOTOS-->
+<section>
+    <img  id="album" />
+    <img  id="album" />
+</section>
+<!--THRID ROW PHOTOS-->
+<section>
+    <img  id="album" />
+

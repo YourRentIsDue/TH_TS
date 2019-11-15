@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <style>
-    .row {
+    .lightbox {
         float: left;
         width: 25%;
     }
@@ -10,13 +10,14 @@
         display: none;
         position: fixed;
         z-index: 1;
-        padding-top: 100px;
+        padding-top:10px;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
         overflow: auto;
         background-color: black;
+        
     }
 
     /*MODAL CONTENT*/
@@ -25,8 +26,8 @@
         background-color: #fefefe;
         margin: auto;
         padding: 0;
-        width: 90%;
-        max-width: 1200px;
+        height: 90%;
+        width:90%;
     }
 
     /*CLOSE BUTTON*/
@@ -37,6 +38,7 @@
         height: 25px;
         font-size: 35px;
         font-weight: bold;
+        margin-left: 20px;
     }
 
     .closeCursor:hover, .closeCursor:focus {
@@ -100,6 +102,7 @@
     .shadow:hover {
         box-shadow: 2px 4px 8px 2px rgba(0,0,0,0.3), 0 6px 20px 0 rgba(0,0,0,0.19);
     }
+
 </style>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -159,16 +162,17 @@
             <a class="previous" onclick="slideNumber(-1)"> &#10094 </a>
 
             <!--THUMBNAIL IMAGES -->
+
             <div class="row">
-                <img class="lightbox" src="Photos/Krakow/Krak3.jpg" />
+                <img class="lightbox" src="Photos/Krakow/Krak3.jpg" onclick="currentSlide(1)" />
             </div>
 
             <div class="row">
-                <img class="lightbox" src="Photos/Krakow/Krak5.jpg" />
+                <img class="lightbox" src="Photos/Krakow/Krak5.jpg" onclick="currentSlide(2)"/>
             </div>
 
             <div class="row">
-                <img class="lightbox" src="Photos/Krakow/Krak6.jpg" />
+                <img class="lightbox" src="Photos/Krakow/Krak6.jpg" onclick="currentSlide(3)"/>
             </div>
 
         </div>
