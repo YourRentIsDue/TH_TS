@@ -120,25 +120,32 @@ li a:hover {
 }
 
 
-#wholeGrid{
+#imageGrid{
     margin-top: 20px;
-    margin-bottom:5%;
-    margin-left: 17%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+
 }
 
-#imageGrid {
-    display:inline-block;
-}
-
-#imageGrid img {
-    max-width:500px;
-}
-
-#mapImage{
-
-max-width: 500px;
+#column{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
 
 
 }
+
+#column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width:100%;
+  }
+
+
+
+  
+
 
 
