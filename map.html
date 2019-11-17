@@ -41,15 +41,18 @@
                 var aberdeenBeach = new google.maps.LatLng(57.1597, 2.0796); //creating a variable with the lat and lng of aberdeen
                 var krakow = new google.maps.LatLng(50.0647, 19.9450);
                 var slovakia = new google.maps.LatLng(48.9434, 19.5900);
+                var orkney = new google.maps.LatLng(58.98465, -2.95953);
 
 
                 var aberdeenMarker = new google.maps.Marker({ position: aberdeenBeach, map: map });
                 var krakowMarker = new google.maps.Marker({ position: krakow, map: map }); //creating a marker
                 var slovakiaMarker = new google.maps.Marker({ position: slovakia, map: map }); //creating a marker
+                var orkneyMarker = new google.maps.Marker({ position: orkney, map: map });
 
-                var aberdeenContent = '<a href="AberdeenBeachSeptember.html"><img id = mapImage src= Photos/AberdeenBeachTH.jpg></a>'; //creating the content which desplays during the marker click event
-                var krakowContent = '<a href="Krakow.html"><img id = mapImage src= Photos/KrakowMariackiTH.jpg></a>';
-                var slovakiaContent = '<a href="SlovakiaChopok.html"><img id = mapImage src= Photos/ChopokTH.jpg></a>';
+                var aberdeenContent = '<a href="AberdeenTrip.html"><img id = mapImage src= Photos/AberdeenBeachTH.jpg></a>'; //creating the content which desplays during the marker click event
+                var krakowContent = '<a href="KrakowTrip.html"><img id = mapImage src= Photos/KrakowMariackiTH.jpg></a>';
+                var slovakiaContent = '<a href="ChopokTrip.html"><img id = mapImage src= Photos/ChopokTH.jpg></a>';
+                var orkneyContent = '<a href="OrkneyTrip.html"><img id = mapImage src= Photos/Orkney/theWhaleBone.jpg></a>';
 
                 var infowindowAberdeen = new google.maps.InfoWindow({  //creating a fucntion that opens the content once the marker has been clicked
                     content: aberdeenContent
@@ -61,6 +64,10 @@
 
                 var infowindowSlovakia = new google.maps.InfoWindow({  //creating a fucntion that opens the content once the marker has been clicked
                     content: slovakiaContent
+                });
+
+                var infowindowOrkney = new google.maps.InfoWindow({  //creating a fucntion that opens the content once the marker has been clicked
+                    content: orkneyContent
                 });
 
                 aberdeenMarker.addListener('click', function () { //creating a listener for a marker click
@@ -76,6 +83,11 @@
                 slovakiaMarker.addListener('click', function () { //creating a listener for a marker click
 
                 infowindowSlovakia.open(map, slovakiaMarker);  //calling function "info window";
+                });
+     
+                orkneyMarker.addListener('click', function () { //creating a listener for a marker click
+
+                infowindowOrkney.open(map, orkneyMarker);  //calling function "info window";
                 });
 
             }
