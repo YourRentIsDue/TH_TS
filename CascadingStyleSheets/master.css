@@ -5,6 +5,13 @@
     top:0;
     }
 
+#mapImage {
+
+width:400px;
+
+
+}
+
 html, body {
 
     height: 100%;
@@ -142,6 +149,114 @@ li a:hover {
     vertical-align: middle;
     width:100%;
   }
+
+  
+
+main {
+    border: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    top:0;
+}
+
+#tripImage img{
+
+    width: 580px;
+}
+
+#title {
+    margin-left:auto;
+    margin-right:auto;
+    width:15%;
+    padding: 0px 2px;
+    margin-top:10px;
+    background-color: #FE5F55;
+}
+
+#title h1 {
+    text-align: center;
+}
+
+#backMap{
+    vertical-align: middle;
+    text-align: center;
+    width:200px;
+    height:40px;
+    top:2%;
+    background-color: #FE5F55;
+
+}
+
+
+#backMap a {
+    position:relative;
+    top:20%;
+    text-decoration: none;
+    color:black;   
+}
+
+#name {
+    vertical-align: middle;
+    text-align: center;
+    width:580px;
+    height:40px;
+    margin-bottom:17px;
+    top:2%;
+    background-color: #FE5F55;
+
+}
+
+#name p {
+    position:relative;
+    top:20%;
+    text-decoration: none;
+    color:black;   
+}
+
+
+#desc {
+
+    display:block;
+    text-align: center;
+    width:576px;
+    height:200px;
+    margin-bottom:17px;
+    top:2%;
+    background-color: #FE5F55;
+    border-style:solid;
+}
+ 
+#desc p {
+    position:relative;
+    top:10%;
+    text-decoration: none;
+    color:black;
+
+}
+
+#links{
+
+position: absolute;
+right:20px;
+top:300px;
+
+}
+#links a {
+    display: block;
+    background-color: #FE5F55;
+    text-decoration: none;
+    color:black;
+    margin-bottom:20px;
+    width:290px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+    
+    
+    
+
 
 
 
