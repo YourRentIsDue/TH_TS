@@ -12,13 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-
-        section{
-            text-align: center;
-        }
       
-        h4, h3{
-            margin:auto;
+        h4 h3{
             text-align: center;
             display: inline-block;
             border: hidden;
@@ -36,33 +31,36 @@
             height: 3px;
             width: 250px;
             margin: 10px auto;
-            
+        }
+        section{
+            text-align: center;
+        }
+        h4{
+            margin-left: -5%;
         }
     
         .container {
             position: relative;
             width: 50%;
-            margin:auto;
-            text-align: center;
         }
 
         .image {
             opacity: 1;
             display: block;
-            min-width: 250px;
-            height: 250px;
+            min-width: 150%;
+            max-width: 150%;
+            margin: 20%;
             border-radius: 50%;
             transition: .5s ease;
             backface-visibility: hidden;
-            margin:auto;
         }
 
         .middle {
             transition: .5s ease;
             opacity: 0;
             position: absolute;
-            top:50%;
-            left:50%;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             text-align: center;
@@ -76,16 +74,15 @@
             opacity: 1;
         }
 
-        .text {
+        .socialMedia {
             background-color: #BDD5EA;
-            font-size: 16px;
             padding: 10px;
             margin-left: 150px;
         }
 
         .fa {
             padding: 20px;
-            font-size: 30px;
+            font-size: 190%;
             width: 20px;
             text-align: center;
             text-decoration: none;
@@ -118,9 +115,13 @@
 
 <!-- HEADER -->
 <header>
+    <!--NAVIGATION BAR STARTS-->
     <script src="HeadAndFoot.js">
     </script>
-
+     <noscript>
+        Please enable Javascript
+    </noscript>
+    <!--NAVIGATION BAR ENDS-->
 </header>
 <!-- END OF THE HEADER-->
 
@@ -128,17 +129,19 @@
 <main class="grid-container">
         
     <div id="content">
+        <!--SECTION INTRO STARTS-->
         <section>
             <h3><br>Meet our current members<br></h3>
         </section>
+        <!--SECTION INTRO ENDS-->
         
 
         <!--SECTION 1 STARTS-->
         <section class="grid-33">
                 <div class="container">
-                        <img src="Members/Scooby.jpg" alt="Michael" class="image" style="width:100%">
+                        <img src="Photos/Members/Scooby.jpg" alt="Michael" class="image" style="width:100%">
                         <div class="middle">
-                          <div class="text">
+                          <div class="socialMedia">
                             <ul>
                                 <li><a href="#" class="fa fa-facebook"></a></li>
                                 <li><a href="#" class="fa fa-twitter"></a></li>
@@ -146,20 +149,19 @@
                             </ul>
                           </div>
                         </div>
-                        <h4>Michael<br>
-                            PRESIDENT
-                        </h4>
                       </div>
-
+                <h4>Michael<br>
+                    PRESIDENT
+                </h4>
         </section>
         <!-- SECTION 1 ENDS -->
 
         <!-- SECTION 2 STARTS-->
         <section class="grid-33">
                 <div class="container">
-                        <img src="Members/Fred.jpg" alt="Josh" class="image" style="width:100%">
+                        <img src="Photos/Members/Fred.jpg" alt="Josh" class="image" style="width:100%">
                         <div class="middle">
-                            <div class="text">
+                            <div class="socialMedia">
                                 <ul>
                                     <li><a href="#" class="fa fa-facebook"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
@@ -167,20 +169,19 @@
                                 </ul>
                             </div>
                         </div>
-                        <h4>Josh<br>
-                            VICE PRESIDENT
-                        </h4>
                 </div>
-
+                <h4>Josh<br>
+                    VICE PRESIDENT
+                </h4>
         </section>
         <!-- SECTION 2 ENDS-->
 
         <!-- SECTION 3 STARTS-->
         <section class="grid-33">
                 <div class="container">
-                        <img src="Members/Daphne.jpg" alt="Klaudia" class="image" style="width:100%">
+                        <img src="Photos/Members/Daphne.jpg" alt="Klaudia" class="image" style="width:100%">
                         <div class="middle">
-                            <div class="text">
+                            <div class="socialMedia">
                                 <ul>
                                     <li><a href="#" class="fa fa-facebook"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
@@ -188,20 +189,19 @@
                                 </ul>
                             </div>
                         </div>
-                        <h4>Klaudia<br>
-                            GENERAL MANAGER
-                        </h4>
                  </div>
-
+                <h4>Klaudia<br>
+                    GENERAL MANAGER
+                </h4>
         </section>
         <!-- SECTION 3 ENDS-->
 
         <!--SECTION 4 STARTS-->
         <section class="grid-33">
                 <div class="container">
-                        <img src="Members/Shaggy.jpeg" alt="Simon" class="image" style="width:100%">
+                        <img src="Photos/Members/Shaggy.jpeg" alt="Simon" class="image" style="width:100%">
                         <div class="middle">
-                            <div class="text">
+                            <div class="socialMedia">
                                 <ul>
                                     <li><a href="#" class="fa fa-facebook"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
@@ -209,20 +209,19 @@
                                 </ul>
                             </div>
                         </div>
-                        <h4>Simon<br>
-                            MEME LORD
-                        </h4>
                 </div>
-
+                <h4>Simon<br>
+                    MEME LORD
+                </h4>
         </section>
         <!-- SECTION 4 ENDS -->
 
         <!-- SECTION 5 STARTS-->
         <section class="grid-33">
                 <div class="container">
-                        <img src="Members/Velma.jpg" alt="Erika" class="image" style="width:100%">
+                        <img src="Photos/Members/Velma.jpg" alt="Erika" class="image" style="width:100%">
                         <div class="middle">
-                            <div class="text">
+                            <div class="socialMedia">
                                 <ul>
                                     <li><a href="#" class="fa fa-facebook"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
@@ -230,20 +229,19 @@
                                 </ul>
                             </div>
                         </div>
-                        <h4>Erika<br>
-                            COORD OF FINANCES<br>
-                        </h4>
                 </div>
-
+                <h4>Erika<br>
+                    COORD OF FINANCES<br>
+                </h4>
         </section>
         <!-- SECTION 5 ENDS-->
 
         <!-- SECTION 6 STARTS-->
         <section class="grid-33">
                 <div class="container">
-                        <img src="Members/Scrappy.png" alt="Weronika" class="image" style="width:100%">
+                        <img src="Photos/Members/Scrappy.png" alt="Weronika" class="image" style="width:100%">
                         <div class="middle">
-                            <div class="text">
+                            <div class="socialMedia">
                                 <ul>
                                     <li><a href="#" class="fa fa-facebook"></a></li>
                                     <li><a href="#" class="fa fa-twitter"></a></li>
@@ -251,18 +249,19 @@
                                 </ul>
                             </div>
                         </div>
-                        <h4>Weronika<br>
-                            TRAVEL LEADER
-                        </h4>
                 </div>
-
+                <h4>Weronika<br>
+                    TRAVEL LEADER
+                </h4>
         </section>
         <!--SECTION 6 ENDS-->
         
         <!--JOIN BUTTON-->
+        <section>
         <a href="#">
             <p class="join"><b>Become a TurboHedgehog</b></p>
         </a>
+        <section>
 
     </div>
 

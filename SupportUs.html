@@ -10,24 +10,16 @@
     <link rel="stylesheet" href="CascadingStyleSheets/unsemantic-grid-responsive.css" />
     <link rel="shorcut icon" type="image/png" href="Photos/turbohedgehogs3.ico" />
     <style>
-        #postcard {
-            max-width: 250px;
-            min-height:450px;
+
+        .image {
+            max-width: 50%;
             float: left;
             padding-right: 20px;
         }
 
-        #sharing {
-            max-width: 250px;
-            min-height: 450px;
-            float: left;
-            padding-right: 20px;
-            
-        }
         .grid-50{
-             background-color: #BDD5EA;
-             padding: 2% 2%;
-             min-height: 470px;
+            background-color: #BDD5EA;
+            padding: 2% 2%;
         }
         h4{
             
@@ -40,11 +32,9 @@
         .description{
             text-align: center;
             border:hidden;
-            margin-left: 47%;
-            margin-right: 10%;
+            margin-left: 50%;
         }
-       
- 
+
     </style>
 </head>
 
@@ -52,8 +42,13 @@
 
     <!-- HEADER -->
     <header>
-        <script src="HeadAndFoot.js">
-        </script>
+        <!--NAVIGATION BAR STARTS-->
+    <script src="HeadAndFoot.js">
+    </script>
+    <noscript>
+        Please enable Javascript
+    </noscript>
+    <!--NAVIGATION BAR ENDS-->
 
     </header>
     <!-- END OF THE HEADER-->
@@ -77,7 +72,7 @@
 
             <!--SECTION 1 STARTS-->
             <section class="grid-50">
-                <img src="Members/postcard.jpg" alt="Postcard" id="postcard" />
+                <img src="Photos/postcard.jpg" alt="Postcard" class="image" />
                 <h3 class="description">Buy a postcard</h3>
                 <p>
                     Whenever we travel to different places we would like to send postcards to our friends and
@@ -86,7 +81,6 @@
                     Our society travels all the time to variety of countries and regions. Hence, our postcards will enrich
                     every collection. You can send a donation to our bank account (contact us in private message) or via
                     Student Union.
-                </p>
                 </p>
                 <a href="#">
                     <p class="join"><b>Support Us</b></p>
@@ -97,7 +91,7 @@
 
             <!-- SECTION 2 STARTS-->
             <section class="grid-50">
-                <img src="Members/sharing.jpg" alt="Share" id="sharing" />
+                <img src="Photos/sharing.jpg" alt="Share" class="image" />
                 <h3 class="description">Share our activities on social media</h3>
                 <p>
                     You can help our society a lot by doing so little. If you see our new post, photo or like our
