@@ -85,11 +85,11 @@ function animation (){
 let navBar = document.createElement("nav");
 
 let arrayOfLocations = [ //First element name, second element href
-    ["Home","#"],
+    ["Home","Home.html"],
     ["About","About.html"],
     ["Map","map.html"],
     ["Blog", "blog.html"],
-    ["Events","#"],
+    ["Events","Calendar.html"],
     ["Local Tourism","localTourism.html"],
     ["Gallery","GalleryHome.html"],
     ["Memes","memes.html"],
