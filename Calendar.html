@@ -127,6 +127,10 @@
                             </ul>
 
                             <script>
+                                  var node= document.getElementById("days");
+                                  while (node.firstChild) {
+                                    node.removeChild(node.firstChild);
+                                  }
                                 //get todays date
                                 var d = new Date();
                                 //calendar event class
@@ -254,7 +258,7 @@
                                   //add the events to the calendar
                                   for(let event = 0;event< eventArray.length;event++){
                                     if(eventArray[event].date.getMonth()==date.getMonth()){
-                                      days.childNodes[1+monthStart+eventArray[event].date.getDate()].setAttribute("class",eventArray[event].type)
+                                      days.childNodes[monthStart+eventArray[event].date.getDate()].setAttribute("class",eventArray[event].type)
                                     }
                                   }
                                 }
