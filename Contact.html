@@ -228,8 +228,34 @@
 
 
                 <!-- FORM TO SUBMIT A MESSAGE-->
+                
+                 <script>
+                        function validateForm() {
+                          var x = document.forms["FMessage"]["name"].value;
+                          if (x == "" || x == null) {
+                            alert("All Fields Must Be Filled Out");
+                            return false;
+                          }
+                        }
+                        function validateForm() {
+                          var x = document.forms["FMessage"]["email"].value;
+                          if (x == "" || x == null) {
+                            alert("All Fields Must Be Filled Out");
+                            return false;
+                          }
+                        }
+                        function validateForm() {
+                          var x = document.forms["FMessage"]["message"].value;
+                          if (x == "" || x == null) {
+                            alert("All Fields Must Be Filled Out");
+                            return false;
+                          }
+                        }
+                        </script>
+
+
                 <section>
-                    <form action="form.html">
+                        <form name="FMessage" action="form.html" onsubmit="return validateForm()" method="post" required>
                         <fieldset>
                             <div class="Form">
                                 <h3 class="description">Send Us a Message</h3>
@@ -241,7 +267,6 @@
                                 <br>
                                 Message<br>
                                 <textarea name="message" cols="45" rows="10"></textarea>
-
                                 <br><br>
                                 <input type="submit" value="Submit">
                         </fieldset>
