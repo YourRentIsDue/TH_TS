@@ -99,6 +99,7 @@
 
                     let articleImg = document.createElement("img");
                     articleImg.setAttribute("src", this.img);
+                    articleImg.setAttribute("alt", this.title)
 
                     let articleTitle = document.createElement("h3");
                     articleTitle.appendChild(document.createTextNode(this.title));
@@ -117,12 +118,11 @@
             }
 
             console.log("hewwo")    
-            a1 = new Article("Photos/turboSquad.jpeg","#","Title","Erika hutchison wrote this shockingly enough");
-            a2 = new Article("Photos/lobster.png","#","Title","Erika hutchison wrote this shockingly enough");
-            a3 = new Article("Photos/ChopokTH.jpg","#","Title","Erika hutchison wrote this shockingly enough");
-            a4 = new Article("Photos/turboSquad.jpeg","#","Title","Erika hutchison wrote this shockingly enough");
-            a5 = new Article("Photos/turboSquad.jpeg","#","Title","Erika hutchison wrote this shockingly enough");
-            articleArray = [a1,a2,a3,a4,a5];
+            a1 = new Article("Photos/localTourismPhotos/WinterGardens.jpg","#","Duthie Park Winter Gardens","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+            a2 = new Article("Photos/localTourismPhotos/KincorthHill.jpg","#","Kincorth Hill","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+            a3 = new Article("Photos/localTourismPhotos/ScienceCentre.jpg","#","Aberdeen Science Centre","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+            a4 = new Article("Photos/localTourismPhotos/MaritimeMueseum.jpg","#","Aberdeen Maritime Museum","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
+            articleArray = [a1,a2,a3,a4];
             
             var articleDiv = document.getElementById("articles");
             for(let count = 0 ; count < articleArray.length ; count ++){
