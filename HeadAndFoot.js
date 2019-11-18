@@ -86,7 +86,7 @@ let navBar = document.createElement("nav");
 
 let arrayOfLocations = [ //First element name, second element href
     ["Home","Home.html"],
-    ["About","About.html"],
+    ["About","about.html"],
     ["Map","map.html"],
     ["Blog", "blog.html"],
     ["Events","Calendar.html"],
