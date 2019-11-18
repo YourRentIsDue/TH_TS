@@ -1,4 +1,4 @@
-﻿#map {
+#map {
 
     position: fixed; 
     height: 76%; 
@@ -166,12 +166,20 @@ main {
 }
 
 #title {
-    margin-left:auto;
-    margin-right:auto;
-    width:15%;
-    padding: 0px 2px;
-    margin-top:10px;
-    background-color: #FE5F55;
+ text-align: center;
+    border:hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #BDD5EA;
+    padding: 15px 25px;
+    max-width: 100%;
+    display:block;
+    text-align: left;
+    width:576px;
+    height:px;
+    margin-top: 50px;
+    margin-bottom:50px;
+    top:2%;
 }
 
 #title h1 {
@@ -179,12 +187,19 @@ main {
 }
 
 #backMap{
-    vertical-align: middle;
-    text-align: center;
-    width:200px;
-    height:40px;
+    text-align: left;
+    border:hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #BDD5EA;
+    padding: 15px 25px;
+    max-width: 100%;
+    display:block;
+    text-align: left;
+    width:576px;
+    height:30px;
+    margin-bottom:17px;
     top:2%;
-    background-color: #FE5F55;
 
 }
 
@@ -203,7 +218,7 @@ main {
     height:40px;
     margin-bottom:17px;
     top:2%;
-    background-color: #FE5F55;
+    background-color: #BDD5EA;
 
 }
 
@@ -216,15 +231,19 @@ main {
 
 
 #desc {
-
-    display:block;
     text-align: center;
+    border:hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #BDD5EA;
+    padding: 15px 25px;
+    max-width: 100%;
+    display:block;
+    text-align: left;
     width:576px;
-    height:200px;
+    height:1000px;
     margin-bottom:17px;
-    top:2%;
-    background-color: #FE5F55;
-    border-style:solid;
+    margin-top:17px;
 }
  
 #desc p {
@@ -238,13 +257,13 @@ main {
 #links{
 
 position: absolute;
-right:20px;
-top:300px;
+right:250px;
+top:200px;
 
 }
 #links a {
     display: block;
-    background-color: #FE5F55;
+    background-color: #BDD5EA;
     text-decoration: none;
     color:black;
     margin-bottom:20px;
@@ -256,11 +275,4 @@ top:300px;
     
     
     
-
-
-
-
-  
-
-
 
