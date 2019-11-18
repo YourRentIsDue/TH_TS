@@ -1,10 +1,12 @@
 ﻿main {
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 6%;
-    margin-top: 2%;
+
 }
 
+a{
+    text-decoration:none;
+}
 section {
 
     text-align: center;
@@ -13,25 +15,19 @@ section {
 /*SIZE AND PLACEMENT OF PHOTOS*/
 
 #album {
-    width: 43%;
+    width: 47%;
 }
 
     /* HYPERLINK EDIT STARTS*/
 h3 {
     margin-left: 9%;
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-size: 15px;
 }
 
 .link:visited {
-    color: #ffffff;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-.link:visited {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     background-color: transparent;
 }
