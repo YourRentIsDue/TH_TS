@@ -79,6 +79,10 @@
               background: red;
               color: white;
             }
+            #days .other {
+              background: lightblue;
+              color: white;
+            }
             
             
             </style>
@@ -166,7 +170,8 @@
                                 }
                                 event1 = new CalendarEvent(new Date(2019,10,23),"event")
                                 event2 = new CalendarEvent(new Date(2019,10,17),"event")
-                                eventArray = [event1,event2]
+                                event3 = new CalendarEvent(new Date(2019,10,12),"other")
+                                eventArray = [event1,event2,event3]
                                 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                                 //add weekdays (adding it out of js messed with the spacing and i wasnt sure how else to fix it)
                                 var weekdays =["Mo","Tu","We","Th","Fr","Sa","Su"];
@@ -281,10 +286,7 @@
                                     }
                                   }
                                   //add the events to the calendar
-                                  console.log(eventArray)
                                   for(let event = 0;event< eventArray.length;event++){
-                                    console.log(eventArray[event].date.getMonth())
-                                    console.log(date.getMonth())
                                     if(eventArray[event].date.getMonth()==date.getMonth()){
                                       days.childNodes[1+monthStart+eventArray[event].date.getDate()].setAttribute("class",eventArray[event].type)
                                     }
