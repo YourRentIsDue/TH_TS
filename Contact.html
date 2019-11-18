@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="CascadingStyleSheets/navAndFoot.css" />
+    <link rel="stylesheet" type="text/css" href="CascadingStyleSheets/master.css" />
+    <link rel="stylesheet" href="CascadingStyleSheets/unsemantic-grid-responsive.css" />
+    <link rel="shorcut icon" type="image/png" href="Photos/turbohedgehogs3.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        h4 h3 {
+            text-align: center;
+            display: inline-block;
+            border: hidden;
+            background-color: #BDD5EA;
+            color: #000000;
+            text-decoration: none;
+            padding: 15px 25px;
+            max-width: 50%;
+        }
+
+        h3:after {
+            content: '';
+            background: #577399;
+            display: block;
+            height: 3px;
+            width: 250px;
+            margin: 10px auto;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        h4 {
+            margin-left: -5%;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            min-width: 150%;
+            max-width: 150%;
+            margin: 20%;
+            border-radius: 50%;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .socialMedia {
+            background-color: #BDD5EA;
+            padding: 10px;
+            margin-left: 150px;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 190%;
+            width: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        input[type=submit] {
+            text-align: center;
+            display: inline-block;
+            border: hidden;
+            background-color: #FE5F55;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 55px;
+            vertical-align: middle;
+        }
+
+        input[type=submit]:hover,
+        input[type=submit]:active {
+            background-color: red;
+        }
+
+        fieldset {
+            border: none;
+            background-color: transparent;
+        }
+
+        legend {
+            text-align: center;
+            display: inline-block;
+            border: hidden;
+            background-color: #BDD5EA;
+            color: #000000;
+            text-decoration: none;
+            padding: 15px 25px;
+            max-width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!--NAVIGATION BAR STARTS-->
+        <script src="HeadAndFoot.js">
+        </script>
+        <noscript>
+            Please enable Javascript
+        </noscript>
+        <!--NAVIGATION BAR ENDS-->
+    </header>
+    <!-- END OF THE HEADER-->
+
+
+
+
+
+    <!--MAIN STARTS-->
+    <main class="grid-container">
+
+        <div id="content">
+            <!--TITLE-->
+            <section>
+                <h3><br>Contact Us<br></h3>
+            </section>
+            <!--TITLE ENDS-->
+
+            <div>
+                <p class="Follow"><b>Follow us on our Social Media Pages!</b></p>
+
+            </div>
+
+
+            <!--LINK 1-->
+            <section class="grid-33">
+                <div class="container">
+                    <a href="https://facebook.com/"><img src="Photos/Contact Us/FB.png" alt="Facebook" class="image"
+                            style="width:50%"></a>
+                    <div class="middle">
+                        <div class="socialMedia">
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            <!-- LINK 2 ENDS -->
+
+            <!-- LINK 2-->
+            <section class="grid-33">
+                <div class="container">
+                    <a href="https://twitter.com/"><img src="Photos/Contact Us/Twitter.png" alt="Twitter" class="image"
+                            style="width:100%"></a>
+                    <div class="middle">
+                        <div class="socialMedia">
+                        </div>
+                    </div>
+                </div>
+        
+            </section>
+            <!-- LINK 2 ENDS-->
+
+
+
+            <!-- LINK 3 STARTS-->
+            <section class="grid-33">
+                <div class="container">
+                    <a href="https://instagram.com/"><img src="Photos/Contact Us/Insta.png" alt="Instagram"
+                            class="image" style="width:100%"></a>
+                    <div class="middle">
+                        <div class="socialMedia">
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+            <!-- LINK ENDS-->
+
+
+            <!-- CONTACT INFO-->
+
+            <section>
+                <section class="grid-50">
+                    <h3 class="description">Head Office</h3>
+                    <p>
+
+                        N533<br>
+                        Robert Gordon University<br>
+                        Garthdee Rd<br>
+                        Aberdeen<br>
+                        AB10 7AQ<br><br>
+
+                        <b>Phone Number</b><br><br>
+                        01224 345 976<br>
+                        10am to 5pm Tuesdays to Thursdays<br>
+
+                    </p>
+                    
+                </section>
+
+                <!-- SECTION ENDS-->
+
+
+
+                <!-- FORM TO SUBMIT A MESSAGE-->
+                <section>
+                    <form action="form.html">
+                        <fieldset>
+                            <div class="Form">
+                                <h3 class="description">Send Us a Message</h3>
+                                Name<br>
+                                <input type="text" name="name">
+                                <br>
+                                Email Address<br>
+                                <input type="text" name="email">
+                                <br>
+                                Message<br>
+                                <textarea name="message" cols="45" rows="10"></textarea>
+
+                                <br><br>
+                                <input type="submit" value="Submit">
+                        </fieldset>
+                    </form>
+                </section>
+                <!-- FORM ENDS-->
+
+
+
+    </main>
+    <!-- MAIN ENDS-->
+
+    <!--FOOTER STARTS-->
+    <footer>
+        <p> (c)TurboHedgehogs 2019</p>
+    </footer>
+    <!-- FOOTER ENDS-->
+
+
+</body>
+
+</html>
