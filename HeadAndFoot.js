@@ -85,7 +85,7 @@ function animation (){
 let navBar = document.createElement("nav");
 
 let arrayOfLocations = [ //First element name, second element href
-    ["Home","Home.html"],
+    ["Home","index.html"],
     ["About","about.html"],
     ["Map","map.html"],
     ["Blog", "blog.html"],
