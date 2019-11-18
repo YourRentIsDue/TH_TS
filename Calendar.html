@@ -78,10 +78,12 @@
             #days .event {
               background: red;
               color: white;
+              cursor: pointer;
             }
             #days .other {
               background: lightblue;
               color: white;
+              cursor: pointer;
             }
             
             
@@ -134,13 +136,17 @@
                                 //get todays date
                                 var d = new Date();
                                 //calendar event class
-                                function CalendarEvent(eventDate,eventType){
+                                function CalendarEvent(eventDate,eventType,eventDetails){
                                   this.date = eventDate;
                                   this.type = eventType;
+                                  this.details = eventDetails;
                                 }
-                                event1 = new CalendarEvent(new Date(2019,10,23),"event")
-                                event2 = new CalendarEvent(new Date(2019,10,17),"event")
-                                event3 = new CalendarEvent(new Date(2019,10,12),"other")
+                                function eventClick(){
+                                  alert("hello ran out of time to code this")
+                                }
+                                event1 = new CalendarEvent(new Date(2019,10,23),"event","Rgu Bake Sale")
+                                event2 = new CalendarEvent(new Date(2019,10,17),"event","Visting Mueseum")
+                                event3 = new CalendarEvent(new Date(2019,10,12),"other","Society Meeting")
                                 eventArray = [event1,event2,event3]
                                 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
                                 //add weekdays (adding it out of js messed with the spacing and i wasnt sure how else to fix it)
@@ -244,13 +250,13 @@
                                     days.appendChild(dayLiObject);
                                   }
                                   //the spaces left over
-                                  let numSpacesUsed = days.childElementCount
-                                  let rowNumbers = 42
+                                  let numSpacesUsed = days.childElementCount;
+                                  let rowNumbers = 42;
                                   if (numSpacesUsed< rowNumbers){
                                     let left = rowNumbers-numSpacesUsed
                                     for(let count = 0; count < left;count++ ){
                                       otherMonth = document.createElement("li");
-                                      otherMonth.setAttribute("class","otherMonth")
+                                      otherMonth.setAttribute("class","otherMonth");
                                       otherMonth.innerHTML = (count+1).toString();
                                       days.appendChild(otherMonth);
                                     }
@@ -258,7 +264,8 @@
                                   //add the events to the calendar
                                   for(let event = 0;event< eventArray.length;event++){
                                     if(eventArray[event].date.getMonth()==date.getMonth()){
-                                      days.childNodes[monthStart+eventArray[event].date.getDate()].setAttribute("class",eventArray[event].type)
+                                      days.childNodes[monthStart+eventArray[event].date.getDate()].setAttribute("class",eventArray[event].type);
+                                      days.childNodes[monthStart+eventArray[event].date.getDate()].addEventListener("click",eventClick);
                                     }
                                   }
                                 }
