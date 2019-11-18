@@ -73,7 +73,11 @@
             
             #days li.otherMonth {
               background: grey;
-              color: white
+              color: white;
+            }
+            .event {
+              background: red;
+              color: white;
             }
             
             
@@ -136,7 +140,7 @@
                       
                             <body>
                             
-                            <h1>TurboHedgehogs Calander</h1>
+                            <h1>TurboHedgehogs Calendar</h1>
                             
                             <div class="month">      
                               <ul>
@@ -151,21 +155,32 @@
                             </ul>
                             <ul id="days">  
                             </ul>
+
                             <script>
+                                //get todays date
                                 var d = new Date();
+                                //calendar event class
+                                function CalendarEvent(eventDate,eventType){
+                                  this.date = eventDate;
+                                  this.type = eventType;
+                                }
+                                event1 = new CalendarEvent(new Date(2019,10,23),"event")
+                                event2 = new CalendarEvent(new Date(2019,10,17),"event")
+                                eventArray = [event1,event2]
                                 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                                  //add weekdays (adding it out of js messed with the spacing and i wasnt sure how else to fix it)
-                                  var weekdays =["Mo","Tu","We","Th","Fr","Sa","Su"];
-                                  var weekdayElement = document.getElementsByClassName("weekdays")
-                                  for(let count = 0; count < 7;count++){
-                                    let week = document.createElement("li");
-                                    week.innerHTML = weekdays[count]
-                                    weekdayElement[0].appendChild(week)
-                                  }
+                                //add weekdays (adding it out of js messed with the spacing and i wasnt sure how else to fix it)
+                                var weekdays =["Mo","Tu","We","Th","Fr","Sa","Su"];
+                                var weekdayElement = document.getElementsByClassName("weekdays")
+                                for(let count = 0; count < 7;count++){
+                                  let week = document.createElement("li");
+                                  week.innerHTML = weekdays[count]
+                                  weekdayElement[0].appendChild(week)
+                                }
+                                //create the initial calendar
                                 createCalendar(d)
+                                //checks for click
                                 document.getElementById("prev").addEventListener("click",prev);
                                 document.getElementById("next").addEventListener("click",next);
-
                                 function prev(){
                                   if (d.getMonth() - 1 <0){
                                     var year = d.getFullYear() -1
@@ -182,6 +197,7 @@
                                   }
                                   createCalendar(d)
                                 }
+
                                 function next(){
                                   if (d.getMonth() +1 >11){
                                     var year = d.getFullYear() +1
@@ -198,6 +214,7 @@
                                   }
                                   createCalendar(d)
                                 }
+   
                                 function getDaysInMonth(date){
                                   var days = 0;
                                   switch(date.getMonth()){
@@ -261,6 +278,15 @@
                                       otherMonth.setAttribute("class","otherMonth")
                                       otherMonth.innerHTML = (count+1).toString();
                                       days.appendChild(otherMonth);
+                                    }
+                                  }
+                                  //add the events to the calendar
+                                  console.log(eventArray)
+                                  for(let event = 0;event< eventArray.length;event++){
+                                    console.log(eventArray[event].date.getMonth())
+                                    console.log(date.getMonth())
+                                    if(eventArray[event].date.getMonth()==date.getMonth()){
+                                      days.childNodes[1+monthStart+eventArray[event].date.getDate()].setAttribute("class",eventArray[event].type)
                                     }
                                   }
                                 }
