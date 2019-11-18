@@ -3,9 +3,82 @@
 
     <head>    
         <meta charset="utf-8" />
-        <title>Title</title>
+        <title>Events</title>
         <link rel="stylesheet" href="CascadingStyleSheets/navAndFoot.css" />
         <link rel="shorcut icon" type = "image/png" href="Photos/turbohedgehogs3.ico" />
+        <style>
+            * {box-sizing: border-box;}
+            ul {list-style-type: none;}
+            body {font-family: Verdana, sans-serif;}
+            
+            .month {
+              padding: 65px 30px;
+              width: 100%;
+              background: #0000ff ;
+              text-align: center;
+            }
+            
+            .month ul {
+              margin: 0;
+              padding: 0;
+            }
+            
+            .month ul li {
+              color: orange;
+              font-size: 20px;
+              text-transform: uppercase;
+              letter-spacing: 3px;
+            }
+            
+            .month #prev {
+              float: left;
+              padding-top: 10px;
+              cursor: pointer;
+            }
+            
+            .month #next {
+              float: right;
+              padding-top: 10px;
+              cursor: pointer;
+            }
+            
+            .weekdays {
+              margin: 0;
+              padding: 10px 0;
+              background-color: coral;
+            }
+            
+            .weekdays li {
+              display: inline-block;
+              width: 13.6%;
+              color: #666;
+              text-align: center;
+            }
+            
+            #days {
+              padding: 10px 0;
+              background: #eee;
+              margin: 0;
+            }
+            
+            #days li {
+              list-style-type: none;
+              display: inline-block;
+              width: 13.6%;
+              text-align: center;
+              margin-bottom: 5px;
+              font-size:12px;
+              color: #777;
+            }
+            
+            #days li.otherMonth {
+              background: grey;
+              color: white
+            }
+            
+            
+            </style>
+
     </head>
 
     <body>
@@ -60,137 +133,138 @@
 
     
 
-                      <style>
-                            * {box-sizing: border-box;}
-                            ul {list-style-type: none;}
-                            body {font-family: Verdana, sans-serif;}
-                            
-                            .month {
-                              padding: 65px 30px;
-                              width: 100%;
-                              background: #0000ff ;
-                              text-align: center;
-                            }
-                            
-                            .month ul {
-                              margin: 0;
-                              padding: 0;
-                            }
-                            
-                            .month ul li {
-                              color: orange;
-                              font-size: 20px;
-                              text-transform: uppercase;
-                              letter-spacing: 3px;
-                            }
-                            
-                            .month .prev {
-                              float: left;
-                              padding-top: 10px;
-                            }
-                            
-                            .month .next {
-                              float: right;
-                              padding-top: 10px;
-                            }
-                            
-                            .weekdays {
-                              margin: 0;
-                              padding: 10px 0;
-                              background-color: coral;
-                            }
-                            
-                            .weekdays li {
-                              display: inline-block;
-                              width: 13.6%;
-                              color: #666;
-                              text-align: center;
-                            }
-                            
-                            .days {
-                              padding: 10px 0;
-                              background: #eee;
-                              margin: 0;
-                            }
-                            
-                            .days li {
-                              list-style-type: none;
-                              display: inline-block;
-                              width: 13.6%;
-                              text-align: center;
-                              margin-bottom: 5px;
-                              font-size:12px;
-                              color: #777;
-                            }
-                            
-                            .days li .active {
-                              padding: 5px;
-                              background: #1abc9c;
-                              color: white
-                            }
-                            
-                            
-                            </style>
-                            </head>
+                      
                             <body>
                             
                             <h1>TurboHedgehogs Calander</h1>
                             
                             <div class="month">      
                               <ul>
-                                <li class="prev">&#10094;</li>
-                                <li class="next">&#10095;</li>
-                                <li>
-                                  November<br>
-                                  <span style="font-size:18px">2019</span>
-                                </li>
+                                <li id="prev">&#10094;</li>
+                                <li id="next">&#10095;</li>
+                                <li id="monthName"><!-- Month and year goes here--></li>
                               </ul>
                             </div>
+
                             
                             <ul class="weekdays">
-                              <li>Mo</li>
-                              <li>Tu</li>
-                              <li>We</li>
-                              <li>Th</li>
-                              <li>Fr</li>
-                              <li>Sa</li>
-                              <li>Su</li>
                             </ul>
-                            
-                            <ul class="days">  
-                              <li>1</li>
-                              <li>2</li>
-                              <li>3</li>
-                              <li>4</li>
-                              <li>5</li>
-                              <li>6</li>
-                              <li>7</li>
-                              <li>8</li>
-                              <li>9</li>
-                              <li><span class="active">10</span></li>
-                              <li>11</li>
-                              <li>12</li>
-                              <li>13</li>
-                              <li>14</li>
-                              <li>15</li>
-                              <li>16</li>
-                              <li>17</li>
-                              <li>18</li>
-                              <li>19</li>
-                              <li>20</li>
-                              <li>21</li>
-                              <li>22</li>
-                              <li>23</li>
-                              <li>24</li>
-                              <li>25</li>
-                              <li>26</li>
-                              <li>27</li>
-                              <li>28</li>
-                              <li>29</li>
-                              <li>30</li>
-                              
+                            <ul id="days">  
                             </ul>
-                            
+                            <script>
+                                var d = new Date();
+                                var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                                  //add weekdays (adding it out of js messed with the spacing and i wasnt sure how else to fix it)
+                                  var weekdays =["Mo","Tu","We","Th","Fr","Sa","Su"];
+                                  var weekdayElement = document.getElementsByClassName("weekdays")
+                                  for(let count = 0; count < 7;count++){
+                                    let week = document.createElement("li");
+                                    week.innerHTML = weekdays[count]
+                                    weekdayElement[0].appendChild(week)
+                                  }
+                                createCalendar(d)
+                                document.getElementById("prev").addEventListener("click",prev);
+                                document.getElementById("next").addEventListener("click",next);
+
+                                function prev(){
+                                  if (d.getMonth() - 1 <0){
+                                    var year = d.getFullYear() -1
+                                    var month = 11
+                                  }
+                                  else{
+                                    var year  = d.getFullYear()
+                                    var month = d.getMonth()- 1
+                                  }
+                                  d = new Date(year, month, 1, 1, 1, 1, 1);
+                                  var node= document.getElementById("days");
+                                  while (node.firstChild) {
+                                    node.removeChild(node.firstChild);
+                                  }
+                                  createCalendar(d)
+                                }
+                                function next(){
+                                  if (d.getMonth() +1 >11){
+                                    var year = d.getFullYear() +1
+                                    var month = 0
+                                  }
+                                  else{
+                                    var year  = d.getFullYear()
+                                    var month = d.getMonth()+1
+                                  }
+                                  d = new Date(year, month, 1, 1, 1, 1, 1);
+                                  var node= document.getElementById("days");
+                                  while (node.firstChild) {
+                                    node.removeChild(node.firstChild);
+                                  }
+                                  createCalendar(d)
+                                }
+                                function getDaysInMonth(date){
+                                  var days = 0;
+                                  switch(date.getMonth()){
+                                    case 0:
+                                    case 2: 
+                                    case 4: 
+                                    case 6: 
+                                    case 7: 
+                                    case 9: 
+                                    case 11:days = 31;break; 
+                                    case 3: 
+                                    case 5: 
+                                    case 8: 
+                                    case 10: days = 30;break;
+                                    case 1: days = (date.getFullYear()%4 === 0) ? 28 : 29; break;//leap year
+                                    default:break;
+                                  }
+                                  return(days);
+                                }
+                                function createCalendar(date){
+                                  //add month and year to top of calendar
+                                  var calenderTitle = document.getElementById("monthName");
+                                  
+                                  calenderTitle.innerHTML = months[date.getMonth()];
+                                  calenderTitle.appendChild(document.createElement("br"));
+                                  calenderTitle.appendChild(document.createTextNode(date.getFullYear()));
+
+                                  //Works out what day of the month the month starts
+                                  let tempDate = new Date(date.getFullYear(),date.getMonth(),1)
+                                  var monthStart = tempDate.getDay();
+                                  
+                                  for(let count =0;count < 2;count ++){
+                                    monthStart -= 1
+                                    if (monthStart < 0){
+                                      monthStart = 6
+                                    }
+                                  }
+                                  //adds all the elements
+                                  var days = document.getElementById("days");
+                                  //the days before the start of the month
+                                  for (let count = monthStart;count >=0;count--){
+                                    otherMonth = document.createElement("li");
+                                    otherMonth.setAttribute("class","otherMonth")
+                                    otherMonth.innerHTML = (31-count).toString();
+                                    days.appendChild(otherMonth);
+                                  }
+                                  //the days during the month
+                                  var daysInMonth = getDaysInMonth(date)
+                                  for(let day = 1 ;day<= daysInMonth ; day++){
+                                    dayLiObject = document.createElement("li");
+                                    dayLiObject.innerHTML = day.toString();
+                                    days.appendChild(dayLiObject);
+                                  }
+                                  //the spaces left over
+                                  let numSpacesUsed = days.childElementCount
+                                  let rowNumbers = 42
+                                  if (numSpacesUsed< rowNumbers){
+                                    let left = rowNumbers-numSpacesUsed
+                                    for(let count = 0; count < left;count++ ){
+                                      otherMonth = document.createElement("li");
+                                      otherMonth.setAttribute("class","otherMonth")
+                                      otherMonth.innerHTML = (count+1).toString();
+                                      days.appendChild(otherMonth);
+                                    }
+                                  }
+                                }
+                            </script>
                             </body>
                             </html>
         </main>
