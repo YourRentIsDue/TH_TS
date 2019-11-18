@@ -231,11 +231,28 @@
                 
                  <script>
                         function validateForm() {
-                           var x = document.forms["FMessage"]["name"].value | document.forms["FMessage"]["email"].value | document.forms["FMessage"]["message"].value;
+                           var x = document.forms["FMessage"]["name"].value;
                              if (x == "" || x == null) {
                             alert("All Fields Must Be Filled Out");
                             return false;
+                             }
+                        }
+                                 function validateForm() {
+                          var x = document.forms["FMessage"]["email"].value;
+                          if (x == "" || x == null) {
+                            alert("All Fields Must Be Filled Out");
+                            return false;
+                          }
+                        }
+                        function validateForm() {
+                          var x = document.forms["FMessage"]["message"].value;
+                          if (x == "" || x == null) {
+                            alert("All Fields Must Be Filled Out");
+                            return false;
+                          }
+                        }
                           
+                              
                         }
                         </script>
 
